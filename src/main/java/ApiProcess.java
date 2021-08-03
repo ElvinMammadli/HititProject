@@ -13,7 +13,6 @@ import java.util.Scanner;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 /**
  *
@@ -61,6 +60,7 @@ public class ApiProcess {
                 scanner = new Scanner(url.openStream());
                 while (scanner.hasNext()) {
                     inline += scanner.nextLine();
+                    Thread.sleep(300);
                 }
                 JSONParser parse = new JSONParser();
                 Object obj = parse.parse(inline);
@@ -75,7 +75,6 @@ public class ApiProcess {
                     users.add(user);
 
                 }
-                Thread.sleep(300);
 
             }
         }catch(Exception e){
@@ -97,6 +96,8 @@ public class ApiProcess {
                 scanner = new Scanner(url.openStream());
                 while (scanner.hasNext()) {
                     inline += scanner.nextLine();
+                    Thread.sleep(300);
+
                 }
                 JSONParser parse = new JSONParser();
                 Object obj = parse.parse(inline);
