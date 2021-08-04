@@ -23,7 +23,7 @@ public class ApiProcess {
 
 
 
-    public int ConnectToApi(URL url) throws InterruptedException{
+    public int ConnectToApi(URL url)  {
         int responsecode = 0;
         try {
 

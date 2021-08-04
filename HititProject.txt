@@ -13,7 +13,7 @@ repo:kafka user:hachikuji location:null company:null contributions:563
 repo:kafka user:guozhangwang location:San Franscisco company:@confluentinc  contributions:441
 repo:kafka user:mjsax location:Reno, NV company:@confluentinc  contributions:427
 repo:kafka user:rajinisivaram location:UK company:Confluent contributions:325
-repo:kafka user:cmccabe location:Sunnyvale, CA company:Confluent contributions:227
+repo:kafka user:cmccabe location:Sunnyvale, CA company:Confluent contributions:228
 repo:kafka user:junrao location:null company:null contributions:192
 repo:kafka user:dguy location:null company:null contributions:191
 repo:kafka user:ableegoldman location:null company:null contributions:186
