@@ -20,16 +20,20 @@ public class Main  {
      */
 
     public static void main(String[] args) throws IOException, InterruptedException {
+        String filename="HititProject.txt";
         char stop='a';
         String inline;
         List<User> users ;
+        File f = new File(filename);
+        if(f.exists() && !f.isDirectory())
+            f.delete();
         ApiProcess api = new ApiProcess();
         users = api.getMostDownloadedRepo();
         for (User user : users) {
             //create string which included user informations
             inline = "repo:" + user.getProject() + " user:" + user.getUserName() + " location:" + user.getLocation() + " company:" + user.getCompany() +
                     " contributions:" + user.getContributions();
-            try (FileWriter myWriter = new FileWriter("HititProject.txt", true);
+            try (FileWriter myWriter = new FileWriter(filename, true);
                  BufferedWriter bufferedWriter = new BufferedWriter(myWriter);
                  PrintWriter out = new PrintWriter(bufferedWriter)) {
                 out.println(inline);
