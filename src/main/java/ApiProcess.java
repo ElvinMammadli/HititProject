@@ -67,7 +67,6 @@ public class ApiProcess {
                 JSONArray jsonarray = (JSONArray) obj;
                 for (int i = 0; i < 10; i++) {
                     JSONObject jsonObject = (JSONObject) jsonarray.get(i);
-
                     User user = new User();
                     user.setProject(repoName);
                     user.setContributions((int) ((Number) jsonObject.get("contributions")).longValue());
@@ -86,6 +85,7 @@ public class ApiProcess {
     }
     
     public List<User> getUserData(List<User>users) {
+        //Get user data from api and add company name and location to user class
         URL url;
         Scanner scanner = null;
         try {
@@ -101,7 +101,6 @@ public class ApiProcess {
                 }
                 JSONParser parse = new JSONParser();
                 Object obj = parse.parse(inline);
-
                 JSONObject jsonObject = (JSONObject) obj;
                 users.get(i).setCompany((String) jsonObject.get("company"));
                 users.get(i).setLocation((String) jsonObject.get("location"));

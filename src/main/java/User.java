@@ -18,10 +18,10 @@ public class User {
     private String project;
 
     public User() {
-        this.userName="null";
-        this.location="null";
-        this.company="null";
-        this.project="null";
+        this.userName="empty";
+        this.location="empty";
+        this.company="empty";
+        this.project="empty";
     }
 
     public String getProject() {
